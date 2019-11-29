@@ -205,3 +205,24 @@ h3 {
     width: 156px;
     margin: 0;
 }
+
+.navigation__list {
+    display: flex;
+    justify-content: space-around;
+    min-height: 48px;
+    background-color: #000000;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation__list-item {
+    display: flex;
+    align-items: flex-end;
+}
+
+.navigation-link {
+    background-image: url('img/search.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
