@@ -12,8 +12,17 @@ body {
     font-style: normal;
 }
 
+h3 {
+    color: #ffffff;
+    font-family: Uni Neue;
+    font-size: 18px;
+    line-height: 21px;
+    margin: 0;
+}
+
 .slider {
     background-color: #000000;
+    min-width: 440px;
     /* display: flex; */
 
 }
@@ -21,7 +30,7 @@ body {
 .slide {
     background-color: #000000;
     position: relative;
-    
+
 }
 
 .block-titles {
@@ -94,5 +103,105 @@ body {
     color: #ffffff;
     font-family: Uni Neue;
     font-size: 26px;
-    line-height: 30px
+    line-height: 30px;
+    margin: 0;
+    margin-left: 23px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    min-height: 88px;
+    border-bottom: 1px solid #2A2A2A;
+}
+
+.mini-video {
+    display: flex;
+    align-items: center;
+    min-height: 128px;
+    position: relative;
+    border-bottom: 1px solid #2A2A2A;
+}
+
+.title-block {
+    position: absolute;
+    left: 72px;
+    top: 45px;
+}
+
+.mini-video__img {
+    margin-left: 9px;
+    border-radius: 8px;
+    opacity: 40%;
+}
+
+.text {
+    font-family: SF Compact Display;
+    font-size: 16px;
+    line-height: 16px;
+    color: #D5D5D5;
+    margin: 0;
+    margin-top: 4px;
+}
+
+.video {
+    min-height: 200px;
+    display: flex;
+
+    position: relative;
+    border-bottom: 1px solid #2A2A2A;
+}
+
+.video__img {
+    border-radius: 8px;
+    opacity: 40%;
+    margin-left: 9px;
+    margin-top: 24px;
+}
+
+.title-block-video {
+    width: 224px;
+    position: absolute;
+    left: 59px;
+    top: 117px;
+}
+
+.color-text {
+    color: #FF781C;
+}
+
+.event {
+    min-height: 256px;
+    position: relative;
+}
+
+.event__img {
+    margin-left: 20px;
+    margin-top: 24px;
+    border-radius: 8px;
+    opacity: 40%;
+}
+
+.event-text{
+    margin-top: 23px;
+    margin-left: 20px;
+}
+
+.event-title {
+    position: absolute;
+    left: 69px;
+    top: 81px;
+}
+
+.event-title h3 {
+    font-family: Uni Neue;
+    font-size: 22px;
+    line-height: 26px;
+    width: 214px;
+    height: 80px;
+}
+
+.event-title .text {
+    width: 156px;
+    margin: 0;
 }
