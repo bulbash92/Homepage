@@ -2,6 +2,7 @@ body {
     min-width: 320px;
     max-width: 823px;
     padding-bottom: 28px;
+    background-color: #000000;
 }
 
 @font-face {
@@ -28,26 +29,37 @@ h3 {
 }
 
 .slider__items {
-     position: relative;
-     display: flex; 
-     transition: 0.3s;
-     left: 0;
+    position: relative;
+    display: flex;
+    transition: 0.3s;
+    left: 0;
 }
 
 .slider__item {
-    padding: 20px 6px 20px 20px;
+    padding: 20px 6px 20px 0;
 }
 
-.slider__item--hidden {
-    padding-left: 0;
+.slider__item.swiper-slide-active {
+    padding-left: 20px;
+    width: auto !important;
+
 }
 
-.slider__item--hidden > .slide {
+.slider__item.swiper-slide-active>.slide {
+    text-align: right;
+    width: 85vw;
+}
+
+.slider__item.swiper-slide-active>.slide>.slide__text {
+    display: block;
+}
+
+.slider__item>.slide {
     text-align: left;
     width: auto;
 }
 
-.slider__item--hidden > .slide > .slide__text {
+.slider__item>.slide>.slide__text {
     display: none;
 }
 
@@ -64,7 +76,7 @@ h3 {
     position: absolute;
     bottom: 30px;
     text-align: left;
-    
+
 }
 
 .slide__text--main {
@@ -109,7 +121,7 @@ h3 {
 
 .slide__img {
     border-radius: 8px;
-   
+
 
 }
 
@@ -148,26 +160,31 @@ h3 {
     top: 0;
 }
 
-.slider__navigation {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 17px;
+.swiper-pagination {
+    margin-top: 17px;
 }
 
-.slider__dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
+.swiper-pagination-bullet {
     background-color: #333333;
-    margin-right: 6px;
+    opacity: 1;
 }
 
-.slider__dot--active{
+.swiper-pagination-bullet-active { 
     background-color: #FF781C;
 }
 
 .main-container {
     background: #151515;
+}
+
+.container {
+    display: none;
+    margin: 0;
+    padding: 0;
+}
+
+.visible {
+    display: block;
 }
 
 .video__title {
@@ -318,7 +335,7 @@ h3 {
 .navigation__list {
     display: flex;
     justify-content: space-around;
-    min-height: 48px;
+    min-height: 60px;
     background-color: #000000;
     list-style: none;
     margin: 0;
@@ -328,6 +345,7 @@ h3 {
 .navigation__list-item {
     display: flex;
     align-items: flex-end;
+    margin-bottom: 10px;
 }
 
 .navigation-link:focus .path-0 {

@@ -1,34 +1,42 @@
-const { selectSlide } = (function () {
-    function selectSlide ({ currentTarget }) {
-      if (currentTarget.classList.contains("slider__item--hidden")) {
-        const slidesParent = currentTarget.parentElement;
-        const dots = slidesParent.nextElementSibling;
+
+var mySwiper = new Swiper ('.swiper-container', {
+  // Optional parameters
+  direction: 'horizontal',
   
-        Array.from(dots.children).forEach((element) => {
-          if (element.classList.contains("slider__dot--active")) {
-            element.classList.remove("slider__dot--active");
-          }
-        });
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
   
-        Array.from(slidesParent.children).forEach((element) => {
-          if (!element.classList.contains("slider__item--hidden")) {
-            element.classList.add("slider__item--hidden");
-          }
-        });
-  
-        if (currentTarget.offsetLeft === 0) {
-          slidesParent.style.left = "0";
-        } else {
-          slidesParent.style.left = `-${currentTarget.offsetLeft - 15}px`;
-        }
-  
-        const currentTargetIndex = Array.from(slidesParent.children).findIndex(el => el === currentTarget);
-  
-        dots.children.item(currentTargetIndex).classList.add("slider__dot--active");
-        currentTarget.classList.remove("slider__item--hidden");
-      }
-    }
-  
-    return { selectSlide };
-  })();
-  
+})
+
+let openList = document.querySelectorAll(".navigation-link--open");
+let listContent = document.querySelector(".container");
+let close = document.querySelectorAll(".navigation-link--close");
+
+openList.forEach(function (link) {
+    link.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        listContent.classList.add("visible");
+       
+    
+    });
+});
+
+openList.forEach(function (link) {
+    link.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        openList.classList.add("navigation-link--close");
+       
+    
+    });
+});
+
+close.forEach(function (link) {
+    link.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        listContent.classList.remove("visible");
+    
+    });
+});

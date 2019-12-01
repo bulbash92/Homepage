@@ -13,9 +13,9 @@
 </head>
 
 <body>
-    <div class="slider">
-        <div class="slider__items">
-            <div class="slider__item" onclick="selectSlide(event)">
+    <div class="slider swiper-container">
+        <div class="slider__items swiper-wrapper">
+            <div class="slider__item swiper-slide" onclick="selectSlide(event)">
                 <div class="slide">
                     <img class="slide__img" src="img/slide-1.jpg" width="224" height="368" />
                     <div class="slide__text slide__text--main ">
@@ -28,7 +28,7 @@
                     </div>
                 </div>
             </div>
-            <div class="slider__item slider__item--hidden" onclick="selectSlide(event)">
+            <div class="slider__item swiper-slide slider__item--hidden" onclick="selectSlide(event)">
                 <div class="slide">
                     <img class="slide__img" src="img/slide2.jpg" width="224" height="368" />
                     <h3 class="slide__tag slide__tag--hot">Hottest</h3>
@@ -41,7 +41,7 @@
                     </div>
                 </div>
             </div>
-            <div class="slider__item slider__item--hidden" onclick="selectSlide(event)">
+            <div class="slider__item swiper-slide slider__item--hidden" onclick="selectSlide(event)">
                 <div class="slide">
                     <img class="slide__img" src="img/slide3.jpg" width="224" height="368" />
                     <h3 class="slide__tag slide__tag--location">Nearest</h3>
@@ -51,7 +51,7 @@
                     </div>
                 </div>
             </div>
-            <div class="slider__item slider__item--hidden" onclick="selectSlide(event)">
+            <div class="slider__item swiper-slide slider__item--hidden" onclick="selectSlide(event)">
                 <div class="slide">
                     <img class="slide__img" src="img/slide-1.jpg" width="224" height="368" />
                     <h3 class="slide__tag slide__tag--tour">Tour</h3>
@@ -65,18 +65,16 @@
                 </div>
             </div>
         </div>
-        <div class="slider__navigation">
-            <div class="slider__dot slider__dot--active"></div>
-            <div class="slider__dot"></div>
-            <div class="slider__dot"></div>
-            <div class="slider__dot"></div>
+        <div class="swiper-pagination">
+            
         </div>
     </div>
     <main class="main-container">
-        <section class="video">
             <div class="video__title-container">
-                <h2 class="video__title">Feed</h2>
+                <h2 class="video__title .navigation-link--close">Feed</h2>
             </div>
+            <div class="container">
+            <section class="video">
             <a class="video__link-mini" href="#">
                 <img class="video__img-mini" width="80" height="80" src="img/mini1.jpg" />
                 <div class="video__text-mini">
@@ -132,22 +130,23 @@
                 </div>
             </a>
         </section>
+    </div>
     </main>
     <nav class="navigation">
         <ul class="navigation__list">
             <li class="navigation__list-item">
-                <a class="navigation-link" href="#">
+                <a class="navigation-link navigation-link--open" href="#">
                     <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect class="path-0" opacity="0.5" y="15.4" width="20" height="6.6" rx="1"
-                            fill="url(#orange-0)" />
+                            fill="url(#gray-0)" />
                         <path class="path-1"
                             d="M0 0.999999C0 0.447714 0.447715 0 1 0H19C19.5523 0 20 0.447715 20 1V12.2C20 12.7523 19.5523 13.2 19 13.2H1C0.447716 13.2 0 12.7523 0 12.2V0.999999Z"
-                            fill="url(#orange-1)" />
+                            fill="url(#gray-1)" />
                     </svg>
                 </a>
             </li>
             <li class="navigation__list-item">
-                <a class="navigation-link" href="#">
+                <a class="navigation-link navigation-link--close" href="#">
                     <svg width="35" height="34" viewBox="0 0 35 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path class="path-0"
                             d="M3.37906 24.6258C3.53166 24.2476 3.89861 24 4.30641 24H18.6936C19.1014 24 19.4683 24.2476 19.6209 24.6258L22.4455 31.6258C22.7107 32.2831 22.2269 33 21.5182 33H1.48185C0.773095 33 0.289287 32.2831 0.554499 31.6258L3.37906 24.6258Z"
@@ -226,8 +225,9 @@
             </linearGradient>
         </defs>
     </svg>
-    <script src="index.js" defer></script>
+    
     <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <script src="index.js"></script>
 </body>
 
 </html>
